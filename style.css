@@ -1,11 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap");
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 3000px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
 #keuntungan,
@@ -16,4 +23,95 @@ body {
 #keuntungan h2,
 #paketan-roti h2 {
   font-weight: 900;
+}
+
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-caption h5 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px white;
+}
+
+.carousel-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #fff;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.btn-warning:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.img-small {
+  width: 200px;
+  height: auto;
+}
+
+/* CSS untuk tampilan pada smartphone */
+@media (max-width: 767px) {
+  .carousel-item img {
+    height: 90vh;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .carousel-item .carousel-caption h5 {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #keuntungan {
+    padding-top: 6rem;
+  }
+  #paketan-roti {
+    padding-top: 5rem;
+  }
+}
+
+/* CSS untuk tampilan pada tab */
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-item img {
+    height: 100vh; /* Atur tinggi sesuai dengan kebutuhan */
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .carousel-item .carousel-caption h5 {
+    position: absolute;
+    top: -600%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .carousel-item .carousel-caption p {
+    position: absolute;
+    top: -300%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .carousel-item .carousel-caption a {
+    /* position:absolute; */
+    top: -100%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    font-size: 2rem;
+  }
 }
