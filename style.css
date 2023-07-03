@@ -1,7 +1,19 @@
-body {
-    min-height: 2000;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
 }
 
-#keuntungan {
-    padding-top: 2rem;
+body {
+  min-height: 3000px;
+}
+
+#keuntungan,
+#paketan-roti {
+  padding-top: 5rem;
+}
+
+#keuntungan h2,
+#paketan-roti h2 {
+  font-weight: 900;
 }
